@@ -6,19 +6,33 @@
     grid-template-columns: 30% 200px auto;
     grid-template-rows: 40% 20% auto;
 }
+
 .ut {
     background: lightgray;
 }
+
 img {
     width: 100px;
 }
+
 .forgalom {
     position: relative;
 }
-.auto {
-/*helyezd el az autót a lámpa alatt az úttesten!*/
 
+.auto {
+    position: absolute;
+    top: 40%;
+    left: calc(30% - 100px);
+    padding: 10px;
 }
+
+.auto2 {
+    position: absolute;
+    top: 70%;
+    left: calc(50% - 100px);
+    padding: 10px;
+}
+
 .lampa {
     position: absolute;
     width: 20px;
@@ -32,35 +46,57 @@ img {
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 5px;
 }
+
 .lampa div {
     border-radius: 9px;
-    /* background-color: lavender; */
 }
+
 .piros {
     background: rgb(146, 35, 35);
 }
+
 .sarga {
     background: rgb(230, 196, 84);
 }
+
 .zold {
     background: rgb(59, 190, 47);
 }
+
 .balroljobbra {
-    /*https://webiskola.hu/css-ismeretek/css-animacio-animation-keszitese/*/
     animation-name: animacio;
     animation-duration: 5s;
     animation-timing-function: linear;
-    /* animation-delay: 2s;*/
     animation-iteration-count: 1;
-    /* animation-direction: alternate; */
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
+
+.lentrolfel {
+    animation-name: animacio2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
 @keyframes animacio {
     from {
         left: calc(30% - 100px);
     }
     to {
         left: 100%;
+    }
+}
+
+@keyframes animacio2 {
+    from {
+        left: calc(50% - 100px);
+        bottom: calc(30% - 100px);
+    }
+    to {
+        left: 50%;
+        bottom: 100%;
     }
 }
