@@ -92,8 +92,8 @@ img {
 
 @keyframes animacio2 {
     from {
-        left: calc(50% - 100px);
-        bottom: calc(30% - 100px);
+        left: 50%;
+        bottom: 30%;
     }
     to {
         left: 50%;
